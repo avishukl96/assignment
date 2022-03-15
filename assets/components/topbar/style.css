@@ -1,0 +1,112 @@
+/* TOPBAR */
+.air__topbar {
+    min-height: 4.26rem;
+    border-bottom: 1px solid #e4e9f0;
+    padding: 1rem 1.33rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        background-color: rgb(0,123,255); /* Old browsers */
+       position: relative;
+}
+
+.air__topbar .dropdown .dropdown-toggle-icon{color: rgba(255,255,255,0.8);}
+.air__topbar .dropdown-toggle-text{color:#fff;}
+
+.air__topbar .dropdown-menu {
+    padding: 1rem;
+    min-width: 18rem;
+}
+.language-dropdown .dropdown-menu .dropdown-item{
+    padding: 0.4rem 1rem;
+}
+.air__menu--gray .dropdown-menu {
+    font-size: 0.85rem;
+}
+.air__topbar .dropdown.show .dropdown-toggle-text, .air__topbar .btn-group.show .dropdown-toggle-text{color: rgba(255,255,255,0.7);}
+
+.air__topbar .dropdown-toggle:after{color: #fff;}  
+
+.air__topbar__search {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+}
+
+.air__topbar__search::after {
+    display: none;
+}
+
+.air__topbar__searchContainer {
+    position: relative;
+}
+
+.air__topbar__searchIcon {
+    position: absolute;
+    color: #fff;
+    font-size: 1.13rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 1rem;
+}
+
+.air__topbar__searchInput {
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+    padding-left: 3rem;
+    padding-right: 1.33rem;
+    padding-top: 0.33rem;
+    padding-bottom: 0.26rem;
+    width: 17.33rem;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+input.air__topbar__searchInput::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fff!important;
+  }
+  input.air__topbar__searchInput::-moz-placeholder { /* Firefox 19+ */
+    color: #fff!important;
+  }
+  input.air__topbar__searchInput:-ms-input-placeholder { /* IE 10+ */
+    color: #fff!important;
+  }
+  input.air__topbar__searchInput:-moz-placeholder { /* Firefox 18- */
+    color: #fff!important;
+  }
+
+.air__topbar__status {
+    border-radius: 5px;
+    padding: 0.33rem 0.46rem;
+}
+
+.status-dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    display: inline-block;
+}
+
+.status_blink{
+    animation: blinker 2s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0.5;
+    }
+  }
