@@ -8,11 +8,59 @@ class Indexs extends CI_Controller {
 
 	public function index()
 	{
-
-		//var_dump(base_url(),site_url());
-		//$this->load->view('welcome_message');
-		$this->load->view('setup-structure');
+ 		
+		 
+		 
+ 		$data_list['menus'] =   $this->getMenus();
+ 		/*echo "<pre>";
+ 		var_dump($data_list['menus']);die;*/
+		$data_list['parents'] = $this->getData();
+		$this->load->view('setup-structure',$data_list);
 	}
+
+	public function getMenus(){
+		$data = $this->getParentChildStruture();
+		$all_menus = [];
+		$all_menus = $this->getChildMenus($data,0);
+		return $all_menus;
+	}
+
+	public function getChildMenus($data,$parent_id){
+		$menus = [];
+		$menus_all = [];
+			if (!empty($data[$parent_id])) {
+			 		$menus = $data[$parent_id];	
+
+			 		foreach ($menus as $key => $m) {
+			 			$s = [];
+			 			$s = $m;
+ 
+			 			$s['sub_menu'] = $this->getChildMenus($data,$m['id']);
+			 			 $menus_all[]  = $s;
+			 		}
+			 }else{
+			 	 $menus_all = [];
+			 }
+		 
+			 return $menus_all;
+	}
+
+	 
+	 
+
+	public function getParentChildStruture(){
+		$data =   $this->db->query('SELECT id,name,parent_id FROM `structure` ;')->result_array();
+		$menus = [];
+		foreach ($data	 as $key => $value) {
+			 $menus[$value['parent_id']][] =  $value;
+			
+		}
+		 return $menus;
+	}
+
+
+
+ 
 
 	public function setData()
 	{
@@ -41,7 +89,6 @@ class Indexs extends CI_Controller {
 	public function getData()
 	{
 
-		 		
 		return  $this->db->get('structure')->result_array();
 		 
 
