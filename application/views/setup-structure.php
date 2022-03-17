@@ -351,9 +351,10 @@
                                                         <h6 class="mb-0">Add/Edit Structure Item</h6>
                                                     </div>
                                                     <div class="card-body">
-                                                        <div class="alert alert-success" id="success-alert">
-                                                          <!-- <button type="button" class="close" data-dismiss="alert">x</button> -->
-                                                          <strong>Success! </strong> Added.
+                                                       
+                                                       <div class="alert alert-success alert-dismissible">
+                                                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                          <strong>Success!</strong> Added.
                                                         </div>
 
 
@@ -399,264 +400,11 @@
                                                     
 
 
-                                                            
+
                                                     
-                                                           <?php  showMenu($menus);?>      
-                                                  
+                                                           <?php  echo showMenu($menus);?>      
                                                     
 
-
-
-
-
-
-
-
-                                                    <ol class="dd-list dd-level-1">
-                                                      <li class="dd-item" data-id="2">
-                                                          <div class="dd-outer">
-                                                            <div class="dd-handle"><i class="fas fa-arrows-alt"></i></div>
-                                                                <div class="dd-structure-item" data-placement="top" data-toggle="popover" data-html="true" data-content=''>
-                                                                    <div class="dd-structure-img">
-                                                                        <figure>
-                                                                            <img src="<?= base_url() ?>assets/images/user.jpg" alt="">
-                                                                        </figure>
-                                                                    </div>
-                                                                    <div class="dd-structure-content">
-                                                                        <div class="dd-structure-name">User name1</div>
-                                                                        <div class="dropdown">
-                                                                            <button style="max-height:40px" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                                <i class="fas fa-ellipsis-v"></i>
-                                                                            </button>
-                                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                              <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Add</a>
-                                                                              <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Edit</a>
-                                                                              <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i> Delete</a>
-                                                                            </div>
-                                                                          </div>
-                                                                        <div class="dd-structure-code">#1234</div>
-                                                                        <div class="dd-structure-description">Lorem Ipsum is simply dummy text of the printing</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        <ol class="dd-list dd-level-2">
-                                                          <li class="dd-item" data-id="3">
-                                                            <div class="dd-outer">
-                                                                <div class="dd-handle"><i class="fas fa-arrows-alt"></i></div>
-                                                             
-                                                            <div class="dd-structure-item" data-placement="top" data-toggle="popover" data-html="true" data-content='' >
-                                                                <div class="dd-structure-img">
-                                                                    <figure>
-                                                                        <img src="<?= base_url() ?>assets/images/user.jpg" alt="">
-                                                                    </figure>
-                                                                </div>
-                                                                <div class="dd-structure-content">
-                                                                    <div class="dd-structure-name">User name2</div>
-                                                                    <div class="dropdown">
-                                                                        <button style="max-height:40px" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                            <i class="fas fa-ellipsis-v"></i>
-                                                                        </button>
-                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Add</a>
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Edit</a>
-                                                                          <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i> Delete</a>
-                                                                        </div>
-                                                                      </div>
-                                                                    <div class="dd-structure-code">#1234</div>
-                                                                    <div class="dd-structure-description">Lorem Ipsum is simply dummy text of the printing</div>
-                                                                </div>
-                                                            </div>
-                                                          </div>
-                                                        </li>
-                                                          <li class="dd-item" data-id="4">
-                                                            <div class="dd-outer">
-                                                                <div class="dd-handle"><i class="fas fa-arrows-alt"></i></div>
-                                                                <div class="dd-structure-item" data-placement="top" data-toggle="popover" data-html="true" data-content=''>
-                                                                    <div class="dd-structure-img">
-                                                                        <figure>
-                                                                            <img src="<?= base_url() ?>assets/images/user.jpg" alt="">
-                                                                        </figure>
-                                                                    </div>
-                                                                    <div class="dd-structure-content">
-                                                                        <div class="dd-structure-name">User name3</div>
-                                                                        <div class="dropdown">
-                                                                        <button style="max-height:40px" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                            <i class="fas fa-ellipsis-v"></i>
-                                                                        </button>
-                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Add</a>
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Edit</a>
-                                                                          <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i> Delete</a>
-                                                                        </div>
-                                                                      </div>
-                                                                    <div class="dd-structure-code">#1234</div>
-                                                                        <div class="dd-structure-description">Lorem Ipsum is simply dummy text of the printing</div>
-                                                                    </div>
-                                                                </div>
-                                                              </div>
-                                                            </li>
-                                                          <li class="dd-item" data-id="5">
-                                                            <div class="dd-outer">
-                                                                <div class="dd-handle"><i class="fas fa-arrows-alt"></i></div>
-                                                                <div class="dd-structure-item"  data-placement="top" data-toggle="popover" data-html="true" data-content=''>
-                                                                    <div class="dd-structure-img">
-                                                                        <figure>
-                                                                            <img src="<?= base_url() ?>assets/images/user.jpg" alt="">
-                                                                        </figure>
-                                                                    </div>
-                                                                    <div class="dd-structure-content">
-                                                                        <div class="dd-structure-name">User name4</div>
-                                                                        <div class="dropdown">
-                                                                        <button style="max-height:40px" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                            <i class="fas fa-ellipsis-v"></i>
-                                                                        </button>
-                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Add</a>
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Edit</a>
-                                                                          <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i> Delete</a>
-                                                                        </div>
-                                                                      </div>
-                                                                    <div class="dd-structure-code">#1234</div>
-                                                                        <div class="dd-structure-description">Lorem Ipsum is simply dummy text of the printing</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <ol class="dd-list dd-level-3">
-                                                              <li class="dd-item" data-id="6">
-                                                                <div class="dd-outer">
-                                                                    <div class="dd-handle"><i class="fas fa-arrows-alt"></i></div>
-                                                                <div class="dd-structure-item" data-placement="top" data-toggle="popover" data-html="true" data-content=''>
-                                                                    <div class="dd-structure-img">
-                                                                        <figure>
-                                                                            <img src="<?= base_url() ?>assets/images/user.jpg" alt="">
-                                                                        </figure>
-                                                                    </div>
-                                                                    <div class="dd-structure-content">
-                                                                        <div class="dd-structure-name">User name5</div>
-                                                                        <div class="dropdown">
-                                                                        <button style="max-height:40px" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                            <i class="fas fa-ellipsis-v"></i>
-                                                                        </button>
-                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Add</a>
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Edit</a>
-                                                                          <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i> Delete</a>
-                                                                        </div>
-                                                                      </div>
-                                                                    <div class="dd-structure-code">#1234</div>
-                                                                        <div class="dd-structure-description">Lorem Ipsum is simply dummy text of the printing</div>
-                                                                    </div>
-                                                                </div>
-                                                              </div></li>
-                                                              <li class="dd-item" data-id="7">
-                                                                <div class="dd-outer">
-                                                                    <div class="dd-handle"><i class="fas fa-arrows-alt"></i></div>
-                                                                <div class="dd-structure-item" data-placement="top" data-toggle="popover" data-html="true" data-content=''>
-                                                                    <div class="dd-structure-img">
-                                                                        <figure>
-                                                                            <img src="<?= base_url() ?>assets/images/user.jpg" alt="">
-                                                                        </figure>
-                                                                    </div>
-                                                                    <div class="dd-structure-content">
-                                                                        <div class="dd-structure-name">User name6</div>
-                                                                        <div class="dropdown">
-                                                                        <button style="max-height:40px" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                            <i class="fas fa-ellipsis-v"></i>
-                                                                        </button>
-                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Add</a>
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Edit</a>
-                                                                          <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i> Delete</a>
-                                                                        </div>
-                                                                      </div>
-                                                                    <div class="dd-structure-code">#1234</div>
-                                                                        <div class="dd-structure-description">Lorem Ipsum is simply dummy text of the printing</div>
-                                                                    </div>
-                                                                </div>
-                                                              </div></li>
-                                                              <li class="dd-item" data-id="8">
-                                                                <div class="dd-outer">
-                                                                    <div class="dd-handle"><i class="fas fa-arrows-alt"></i></div>
-                                                                <div class="dd-structure-item" data-placement="top" data-toggle="popover" data-html="true" data-content=''>
-                                                                    <div class="dd-structure-img">
-                                                                        <figure>
-                                                                            <img src="<?= base_url() ?>assets/images/user.jpg" alt="">
-                                                                        </figure>
-                                                                    </div>
-                                                                    <div class="dd-structure-content">
-                                                                        <div class="dd-structure-name">User name7</div>
-                                                                        <div class="dropdown">
-                                                                        <button style="max-height:40px" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                            <i class="fas fa-ellipsis-v"></i>
-                                                                        </button>
-                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Add</a>
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Edit</a>
-                                                                          <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i> Delete</a>
-                                                                        </div>
-                                                                      </div>
-                                                                    <div class="dd-structure-code">#1234</div>
-                                                                        <div class="dd-structure-description">Lorem Ipsum is simply dummy text of the printing</div>
-                                                                    </div>
-                                                                </div>
-                                                              </div></li>
-                                                            </ol>
-                                                          </li>
-                                                          <li class="dd-item" data-id="9">
-                                                              <div class="dd-outer">
-                                                            <div class="dd-handle"><i class="fas fa-arrows-alt"></i></div>
-                                                            <div class="dd-structure-item" data-placement="top" data-toggle="popover" data-html="true" data-content=''>
-                                                                <div class="dd-structure-img">
-                                                                    <figure>
-                                                                        <img src="<?= base_url() ?>assets/images/user.jpg" alt="">
-                                                                    </figure>
-                                                                </div>
-                                                                <div class="dd-structure-content">
-                                                                    <div class="dd-structure-name">User name8</div>
-                                                                    <div class="dropdown">
-                                                                        <button style="max-height:40px" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                            <i class="fas fa-ellipsis-v"></i>
-                                                                        </button>
-                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Add</a>
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Edit</a>
-                                                                          <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i> Delete</a>
-                                                                        </div>
-                                                                      </div>
-                                                                    <div class="dd-structure-code">#1234</div>
-                                                                    <div class="dd-structure-description">Lorem Ipsum is simply dummy text of the printing</div>
-                                                                </div>
-                                                            </div>
-                                                          </div></li>
-                                                          <li class="dd-item" data-id="10">
-                                                            <div class="dd-outer">
-                                                                <div class="dd-handle"><i class="fas fa-arrows-alt"></i></div>
-                                                            <div class="dd-structure-item" data-placement="top" data-toggle="popover" data-html="true" data-content=''>
-                                                                <div class="dd-structure-img">
-                                                                    <figure>
-                                                                        <img src="<?= base_url() ?>assets/images/user.jpg" alt="">
-                                                                    </figure>
-                                                                </div>
-                                                                <div class="dd-structure-content">
-                                                                    <div class="dd-structure-name">User name9</div>
-                                                                    <div class="dropdown">
-                                                                        <button style="max-height:40px" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                            <i class="fas fa-ellipsis-v"></i>
-                                                                        </button>
-                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Add</a>
-                                                                          <a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Edit</a>
-                                                                          <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i> Delete</a>
-                                                                        </div>
-                                                                      </div>
-                                                                    <div class="dd-structure-code">#1234</div>
-                                                                    <div class="dd-structure-description">Lorem Ipsum is simply dummy text of the printing</div>
-                                                                </div>
-                                                            </div>
-                                                          </div></li>
-                                                        </ol>
-                                                      </li>
-                                                    </ol>
                                                   </div>
                                                 </div>
                                                   </div>
@@ -694,6 +442,84 @@
 </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+
+<script type="text/javascript">
+    //Avanish changes
+
+ $(document).ready(function($){
+
+$('.alert').hide()
+
+
+
+ 
+   
+        $('#structure_form').validate({
+            rules: {
+               // parent_id: "required",
+                name: "required",
+                code: "required",
+                lettersonly: true
+            },
+            messages: {
+               //  parent_id: "required",
+                name: "required",
+                code: "required",
+            },
+            submitHandler: function(form) {
+               // form.preventDefault()
+                 var formData = $('#structure_form').serialize();
+                //console.log(formData);return false;
+                $.ajax({
+                    type : 'POST',
+                    url : "<?php echo site_url('indexs/setData'); ?>",
+                    data : formData,
+                    dataType: "Json",
+                     success: function (response) {   
+
+                        $('.alert').hide().show();
+                        $('#stru-parent').html(' ').html(response['parent_option']);
+
+                            $('#structure_form').trigger("reset");
+                            $('.note-editable').text('');
+                           // console.log(response);
+                             $('#nestable1').html(' ').html(response['setData']);
+                          
+                            },
+
+                })
+
+                console.log('form');return false;
+              //  form.submit();
+            }
+    
+            // any other options and/or rules
+        });
+ 
+
+
+
+
+
+    /*$(document).on('click','#submit_btn',function(e){
+        e.preventDefault();
+
+        var formData = $('#structure_form').serialize();
+        console.log(formData);return false;
+        $.ajax({
+            type : 'POST',
+            url : '<?php echo base_url('indexs/insertData'); ?>',
+            data : formData
+        })
+    });*/
+ });
+
+</script>
+
+
+
+
 <!-- Structure -->
 <script>
     ;(function($) {
@@ -823,76 +649,6 @@ window.onload = function () {
 </script>
 
 
-
-<script type="text/javascript">
-    //Avanish changes
-
- $(document).ready(function($){
-
-$('.alert').alert('close')
- 
-   
-        $('#structure_form').validate({
-            rules: {
-               // parent_id: "required",
-                name: "required",
-                code: "required",
-            },
-            messages: {
-               //  parent_id: "required",
-                name: "required",
-                code: "required",
-            },
-            submitHandler: function(form) {
-               // form.preventDefault()
-                 var formData = $('#structure_form').serialize();
-                //console.log(formData);return false;
-                $.ajax({
-                    type : 'POST',
-                    url : "<?php echo site_url('indexs/setData'); ?>",
-                    data : formData,
-                    dataType: "Json",
-                     success: function (response) {   
-                     
-                        $('#stru-parent').html(' ').html(response['parent_option']);
-
-                            $('#structure_form').trigger("reset");
-                            $('.note-editable').text('');
-
-                            $("#success-alert").fadeTo(2000, 500).slideUp(500, function() {
-                                  $("#success-alert").slideUp(500);
-                                });
-                          
-                            },
-
-                })
-
-                console.log('form');return false;
-              //  form.submit();
-            }
-    
-            // any other options and/or rules
-        });
- 
-
-
-
-
-
-    /*$(document).on('click','#submit_btn',function(e){
-        e.preventDefault();
-
-        var formData = $('#structure_form').serialize();
-        console.log(formData);return false;
-        $.ajax({
-            type : 'POST',
-            url : '<?php echo base_url('indexs/insertData'); ?>',
-            data : formData
-        })
-    });*/
- });
-
-</script>
 
 
 </html>

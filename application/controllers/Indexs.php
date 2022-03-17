@@ -4,13 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Indexs extends CI_Controller {
  
 	 
-
-
 	public function index()
 	{
  		
-		 
-		 
  		$data_list['menus'] =   $this->getMenus();
  		/*echo "<pre>";
  		var_dump($data_list['menus']);die;*/
@@ -49,7 +45,7 @@ class Indexs extends CI_Controller {
 	 
 
 	public function getParentChildStruture(){
-		$data =   $this->db->query('SELECT id,name,parent_id FROM `structure` ;')->result_array();
+		$data =   $this->db->query('SELECT * FROM `structure` ;')->result_array();
 		$menus = [];
 		foreach ($data	 as $key => $value) {
 			 $menus[$value['parent_id']][] =  $value;
@@ -59,18 +55,13 @@ class Indexs extends CI_Controller {
 	}
 
 
-
- 
-
 	public function setData()
 	{
 
 		  $data = $this->input->post();
 
 		 $this->db->insert('structure',$data);
-		// var_dump($this->getData());die;
-
-
+	 
 		  $data_list = $this->getData();
 		    $new_options = '';
 		    foreach ($data_list as $key => $value) {
@@ -78,19 +69,13 @@ class Indexs extends CI_Controller {
 		    }
 		    $parent_option = $new_options;
 
-
-
-
-
-		 echo json_encode(['data_list'=>$data_list,'parent_option'=> $parent_option]);
+		 echo json_encode(['data_list'=>$data_list,'parent_option'=> $parent_option,'setData'=>showMenu($this->getMenus())]);
 
 	}
 
 	public function getData()
 	{
-
 		return  $this->db->get('structure')->result_array();
-		 
 
 	}
 }
