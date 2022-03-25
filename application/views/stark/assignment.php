@@ -40,12 +40,48 @@
                  </td>
               </tr>
         <?php } ?> 
+      </tbody>
+    </table>
+
+
+
 
      
+     <br><br>
+
+     <h1>2nd Highest salary</h1>
+     <h2> <?php     echo $second_highest['salary']; ?></h2>
      
+
+       <h1>5th Highest salary</h1>
+     <h2><?php echo $fifth_highest['salary']; ?></h2>
+     
+
+            <h1>Avg</h1>
+          
+
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+
+         <th>Name</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+          <?php  foreach ($avg as $key => $value) { ?>
+              <tr>
+                <td><?php echo $value['department']; ?></td>
+                 <td><?php echo $value['salary'];?></td>
+                 
+               
+              </tr>
+        <?php } ?> 
      
     </tbody>
   </table>
+
+
 
   </div>
 

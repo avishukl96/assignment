@@ -8,6 +8,11 @@ class Stark extends CI_Controller {
 	{
  	 	$data['department'] = $this->getDepartments();
  	 	$data['Records'] = $this->getRecords();
+ 	 	$data['second_highest'] = $this->salary_report(2);
+ 	 	//var_dump($data['second_highest']);
+ 	 	$data['fifth_highest'] = $this->salary_report(5);
+ 	 	$data['avg'] = $this->salary_avg_department();
+
 		$this->load->view('stark/assignment',$data);
 	}
 
@@ -34,6 +39,26 @@ class Stark extends CI_Controller {
 
  	 	 	//var_dump($data['hobbies']);
 		$this->load->view('stark/edit',$data);
+		 
+	}
+
+
+	public function salary_report($level){
+		$limit1 = $level-1;
+		$limit2 = $level;
+			$sql = 'select * from  employee order by salary desc limit '.$limit1.' , '.$limit2;
+			//var_dump($sql );
+
+		return $this->db->query($sql)->row_array();
+
+		 
+	}
+
+
+	public function salary_avg_department(){
+
+		return $this->db->query('select avg(salary) as salary ,d.name as department from  employee e left join department d on d.id = e.dept_id group by d.id')->result_array();
+
 		 
 	}
 
@@ -76,6 +101,8 @@ public function delete($id){
 		 
  	 	 redirect(site_url('stark'));
 	}
+
+
 
 
 	 
