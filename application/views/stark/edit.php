@@ -42,8 +42,8 @@
                 <input type="checkbox"  name="hobbies[]" value="Watching movies"<?php if( in_array('Watching movies', $edit_record['hobbies']) ){ echo 'checked'; } ?> >&nbsp;<label>Watching movies</label>
       </div>
       <select class="form-control" id="gender" name="gender">
-              <option id="M" <?php if( $edit_record['gender'] == 'M' ){ echo 'selected'; } ?>>Male </option>
-              <option id="F" <?php if( $edit_record['gender'] == 'F' ){ echo 'selected'; } ?>>Female </option>
+              <option value="M" <?php if( $edit_record['gender'] == 'M' ){ echo 'selected'; } ?>>Male </option>
+              <option value="F" <?php if( $edit_record['gender'] == 'F' ){ echo 'selected'; } ?>>Female </option>
       </select>
       <br>
      
